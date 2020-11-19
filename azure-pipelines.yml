@@ -162,6 +162,7 @@ stages:
               deploymentAction: 'Publish'
               dacpacFile: '$(Pipeline.Workspace)/dropDacpac/Tailspin.SpaceGame.Database/bin/Debug/Tailspin.SpaceGame.Database.dacpac'
               ipDetectionMethod: 'AutoDetect'
+              ConnectionString: 'Server=tcp:(servername).database.windows.net,1433;Initial Catalog=tai(databasename);Persist Security Info=False;User ID=(adminlogin);Password=(adminPassword);MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
 
 - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
